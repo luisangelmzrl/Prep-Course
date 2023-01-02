@@ -1,0 +1,167 @@
+CONCEPTOS BÁSICOS:
+
+VARIABLES:
+
+Una variable nos permite almacenar información o datos. Estos datos que vamos a guardar, pueden ser de diferente tipo como números, letras, texto, etc. El concepto 'variable' nos indica que su contenido o valor puede ser modificado en cualquier momento del programa.
+
+Por ejemplo, si en un programa, se necesita trabajar con la edad de una persona, debemos declarar una variable que almacene ese número y esa variable la podemos llamar como nosotros queramos (aunque lo ideal es que el nombre nos indique a simple vista que almacena).
+
+Los nombres de las variables pueden con letras y letras con números, sin espacios y teniendo cuidado que siempre inicien con una letra. Ej
+
+	var A;
+	var Tel;
+	var Lado1;
+	var Apellido;
+
+(En esta explicación utilizaremos // cuando se desea hacer un comentario sobre un comando o una línea, no es un comando del programa como tal)
+
+Ejemplo 1:
+	var Edad;		//Aquí primero declaramos la variable con el nombre 'Edad' 
+	Edad = 8;		//Aquí guardamos en esa variable el dato numérico 8.
+
+Ejemplo2:
+	var N1;		//Primero declaramos una variable con el nombre N1 
+	N1 = 'Jose';	//Aquí guardamos en la variable N el valor de texto 'Jose'
+
+Ejemplo3:
+	var PesoMin = 45;	//Aquí en la misma línea declaramos una variable llamada 'PesoMin' y de una vez se guarda en dicha variable el valor de 45
+
+
+***************************************************************************************************
+
+
+STRINGS:
+
+Las strings son cadenas de texto, es decir un dato que se va a trabajar como texto sin importar su contenido, ya que puede tener letras, símbolos, números o mezcla de los mismos. por ejemplo:
+
+var Nombre = 'Martha';	//Es una cadena de texto de solo letras
+var Clave = 'pedro123+'	//Es una cadena de texto que tiene letras, números y símbolo
+var Placa = 'HPZ239'	//Es una cadena de texto que tiene letras y números
+
+
+***************************************************************************************************
+
+
+FUNCIONES:
+
+Las funciones son como pequeños programas a los que podemos acceder desde otros programas, las funciones realizan algún proceso y las podemos crear cuando ese proceso se debe hacer varias veces dentro de nuestro programa.
+
+Las funciones pueden solamente realizar alguna tarea sin devolvernos ningún valor o nos pueden devolver algún valor si lo necesitamos, por ejemplo:
+
+Ejemplo 1:
+	//Aquí declararemos una función que solo muestre el mensaje 'Hola Amigos!'
+
+	function Saludar(){			//Se inicia declarando así: el comando 'function', el nombre de la función, los paréntesis y apertura de llave {
+		console.log('Hola Amigos!');	//Se escriben todas las instrucciones que tendrá la función, en este ejemplo, el comando console.log muestra el mensaje indicado
+	}				//Al finalizar la funcion se debe cerrar la llave }
+
+
+	//Luego en nuestro programa, todas las veces que quisiéramos mostrar el mensaje, se hace el llamado a la función que ya declaramos, así:
+	
+	Saludar();
+
+
+ARGUMENTOS DE FUNCIONES:
+
+Cuando la función que vamos a crear necesita datos de otros programas para poder trabajar, estamos hablando de argumentos, que simplemente son valores o datos que enviamos desde donde llamamos la función para que esta trabaje.
+
+RETURN DE FUNCIONES:
+
+Cuando la función debe devolver algún dato luego de hacer sus procesos utilizamos el comando return para que devuelva ese valor al punto donde fue llamada en el programa.
+
+Veamos con un ejemplo estos dos conceptos:
+
+Ejemplo 1. Funciones que reciben argumentos y no devuelven nada.
+
+	//Declararemos una función que sume dos números que se le envíen y muestre en pantalla el resultado
+
+	function Sumar(A, B){		//Comando function, nombre de la función y dentro de los paréntesis las variables que va a recibir separados por coma
+		var Resultado;		//Se declara una variable llamada 'Resultado' en donde se guardará la suma que se realice
+		Resultado = A + B;		//Se hace la suma de los dos valores recibidos en A y B y se guarda en la variable Resultado
+		console.log(Resultado)	//Aquí dentro de la misma función se muestra en pantalla el resultado de la suma
+	}				//Fin (cierre) de la función
+
+	Luego en nuestro programa principal, cada vez que necesitemos sumar dos números, llamaremos la función
+
+	Sumar(5, 3);			//Aquí llamamos a la función enviando los números 5 y 3, recordemos que la función los recibirá como A =5 y B=3 
+					//internamente y la función mostrará el resultado de 8
+	...
+	...
+	var N=10;				//Declaramos una variable N y almacenamos en ella el 10
+	Sumar(5,N);			//LLamamos la función enviándo el número 5 y la variable N que vale 10, recordemos que la función los
+					//recibirá como A=5 y B=10 y la función mostrará el resultado de 15
+	...
+	...
+	var n1=7;				//Declaramos la variable n1 y le asignamos el valor de 7
+	var n2=4;				//Declaramos la variable n2 y le asignamos el valor de 4
+	Sumar(n2,n1);			//LLamamos la función enviándo los valores de las variables n2 y n1, en ese orden, es decir 4 primero y 7 como segundo, 
+					//la función los recibirá como A=4 y B=7 y la función mostrará el resultado de 11
+					//Vemos en este ejemplo la importancia del orden en que enviemos los argumentos al llamar la función
+
+
+Ejemplo 2. Funciones que reciben argumentos y devuelven algo
+
+	//Declararemos una función que calcule el impuesto de un artículo
+
+	function Impuesto(VrArticulo){		//Declaramos la función Impuesto que debe recibir un valor que se almacenará en la variable VrArticulo
+		var Imp;			//Declaramos la variable donde vamos a guardar el impuesto calculado
+		Imp = VrArticulo * 0.19;	//Se realiza la operación de multiplicar el valor del artículo por 0.19 (19%) y se guarda en la variable 'Imp'
+		return Imp;		//Se envía el valor calculado y que está guardado en Imp al lugar donde se haya llamado la función;
+	}				//Fin (cierre) de la función
+
+	Luego en nuestro programa principal, cada vez que necesitemos calcular el valor de ese impuesto, llamamos la función enviándole el valor del artículo
+
+	var Nevera = 300000;		//Declaramos una variable 'Nevera' y guardamos en ella el valor de 300.000 (sin punto, los puntos se usan para decimales)
+	var Estufa = 100000;		//Declaramos una variable 'Estufa' y guardamos en ella el valor de 100.000
+	var Televisor = 200000;		//Declaramos una variable 'Televisor' y guardamos en ella el valor de 200.000
+	var ImpArticulo:			//Declaramos una variable 'ImpArticulo' que guardará el impuesto cada vez que se calcule.
+	...
+	...
+	ImpArticulo = Impuesto(Estufa);	//Llamamos la función enviando el valor almacenado en la variable 'Estufa'(100000), la función lo recibirá como 'VrArticulo'
+					//La función calculará el valor de 'Imp' multiplicando VrArticulo * 0.19, es decir, 100000 * 0.19, esto resulta en 19000
+					//Este resultado lo guarda en la variable 'Imp' y con el comando return, la función lo enviará a esta línea
+					//Cuando regresa a este punto el resultado de 19000 se guarda en la variable 'ImpArticulo'
+	console.log('Impuesto de la Estufa: ');	//Mostramos un mensaje en pantalla para indicarle al usuario cual respuesta vamos a mostrar
+	console.log(ImpArticulo);		//Se muestra en pantalla el valor que tenemos en ImpArticulo, es decir, 19000.
+	...
+	...
+	ImpArticulo = Impuesto(Nevera);	//Aquí repetimos el proceso enviando el valor de la nevera para que la función haga el cálculo y lo retorne acá
+					//el valor que tenía antes 'ImpArticulo' será reemplazado por el nuevo resultado de 57000
+	console.log('Impuesto de la Nevera: ');	//Mostramos un mensaje en pantalla para indicarle al usuario cual respuesta vamos a mostrar
+	console.log(ImpArticulo);		//Se muestra en pantalla el valor que tenemos en ImpArticulo, es decir, 57000.
+	...
+	...
+	console.log('Impuesto del Televisor: ');	//Mostramos un mensaje en pantalla para indicarle al usuario cual respuesta vamos a mostrar
+	console.log(Impuesto(Televisor));	//En este caso particular, no llamamos a la función 'Impuesto' para guardar el resultado en la variable 'ImpArticulo' sino
+					//que la colocamos directamente dentro del console.log, ya que es un comando que nos permite llamar funciones dentro
+					//de sus paréntesis y mostrará la respuesta de la función que será de 38000. Es decir que cambiamos dos líneas por una sola
+
+
+
+***************************************************************************************************
+
+
+VALOR BOOLEANOS:
+
+Los valores booleanos los utilizamos cuando podemos tener una de sólo dos posibilidades de verdadero o falso.
+
+Por ejemplo si queremos analizar si una persona puede tener licencia de conducción, debemos tener en cuenta su edad, la cual debe ser de 18 años en adelante. solamente tenemos dos opciones que pueda (true) o que no pueda(false) obtener su licencia de conducción. Por ejemplo:
+
+	var Edad1, Edad 2, Edad3;		//Se declaran tres variables para guardar 3 edades.
+	var LC1, LC2, LC3;			//Se declaran tres variables para indicar si puede o no puede tener su licencia
+	...
+	...
+	Edad1 = 15;			//A la primera edad se le asigna 15
+	LC1 = false;			//Por lo tanto en la variable LC1 se guarda false, es decir que NO puede tener licencia
+	...
+	...
+	Edad2 = 22;			//A la segunda edad se le asigna 22
+	LC2 = true;			//Por lo tanto en la variable LC2 se guarda true, es decir que SI puede tener licencia
+	...
+	...
+	Edad3 = 18;			//A la tercera edad se le asigna 18
+	LC3 = true;			//Por lo tanto en la variable LC3 se guarda true, es decir que SI puede tener licencia
+
+
+LUIS ANGEL MUÑOZ RAMBAL
+luisangelmzrl
