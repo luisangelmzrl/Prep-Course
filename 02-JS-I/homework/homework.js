@@ -1,22 +1,22 @@
 // En estas primeras 6 preguntas, reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
-const MiNombre = "Luis Angel";
+const nuevaString = "Luis Angel";
 
 // Crea una variable numérica, puede ser cualquier número:
-const MiEdad = 45;
+const nuevoNum = 45;
 
 // Crea una variable booleana:
-const Profesional = true;
+const nuevoBool = true;
 
 // Resuelve el siguiente problema matemático:
-const MiResta = 10 - 5;
+const nuevaResta = 10 - 5;
 
 // Resuelve el siguiente problema matemático:
-const MiMultiplicacion = 10 * 4;
+const nuevaMultiplicacion = 10 * 4;
 
 // Resuelve el siguiente problema matemático:
-const MiResiduo = 21 % 5;
+const nuevoModulo = 21 % 5;
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -28,8 +28,7 @@ const MiResiduo = 21 % 5;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-  var Cadena;
-  Cadena = str;
+  var Cadena = str;
   return Cadena;
 }
 
@@ -111,7 +110,8 @@ function obtenerResto(x, y) {
   // Tu código:
   var Residuo;
   Residuo = x % y;
-  console.log('Resto de ' + x + ' entre ' + y + ' es ' + Residuo);
+  console.log(Residuo);
+  return Residuo;
 }
 
 function esPar(num) {
@@ -248,7 +248,7 @@ function areaDelTriangulo(base, altura){
   //Escribe tu código aquí
   var AreaT;
   AreaT = (base * altura) / 2;
-  console.log("El area del triángulo es " + AreaT);
+  return AreaT;
 }
 
 
@@ -258,7 +258,7 @@ function deEuroAdolar(euro){
   //Escribe tu código aquí
   var VrDol;
   VrDol = euro * 1.2;
-  console.log(euro + " euros equivalen a " + VrDol + " dólares");
+  return VrDol;
 }
 
 
@@ -269,12 +269,12 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
   if(letra.length>1)
-    console.log("Dato incorrecto");
+    return "Dato incorrecto";
   else
-    if (letra==='a' || letra==='e' || letra==='i' || letra==='o' || letra==='u' || letra==='A' || letra==='E' || letra==='I' || letra==='O' || letra==='U' || )
-      console.log("Es vocal");
+    if (letra==='a' || letra==='e' || letra==='i' || letra==='o' || letra==='u' || letra==='A' || letra==='E' || letra==='I' || letra==='O' || letra==='U')
+      return "Es vocal";
     else
-      console.log("Dato incorrecto");
+      return "Dato incorrecto";
 }
 
 

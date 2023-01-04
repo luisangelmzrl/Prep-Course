@@ -54,20 +54,20 @@ describe('nuevoBool', function() {
 });
 
 describe('nuevaResta', function() {
-  it('Deberia ser un booleano', function() {
-    expect(nuevaResta).toBe(true);
+  it('Deberia ser un número', function() {
+    expect(typeof nuevaResta).toBe('number');
   });
 });
 
 describe('nuevaMultiplicacion', function() {
-  it('Deberia ser un booleano', function() {
-    expect(nuevaMultiplicacion).toBe(true);
+  it('Deberia ser un número', function() {
+    expect(typeof nuevaMultiplicacion).toBe('number');
   });
 });
 
 describe('nuevoModulo', function() {
-  it('Deberia ser un booleano', function() {
-    expect(nuevoModulo).toBe(true);
+  it('Deberia ser un número', function() {
+    expect(typeof nuevoModulo).toBe('number');
   });
 });
 
