@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+
 const {
     crearUsuario,
 	agregarMetodoPrototype,
@@ -7,6 +8,7 @@ const {
 	agregarMetodo,
 	Persona
 } = require('../homework');
+
 
 describe('crearUsuario()', function() {
 	it('should return a user constructor that correctly builds user objects', function() {
@@ -20,6 +22,7 @@ describe('crearUsuario()', function() {
 	});
 });
 
+
 describe('agregarMetodoPrototype(Constructor)', function() {
 	it('should add the method saludar to the constructor', function() {
 		function Test() {
@@ -31,6 +34,7 @@ describe('agregarMetodoPrototype(Constructor)', function() {
 	});
 });
 
+
 describe('agregarStringInvertida(StringPrototype)', function(){
 	it('should add a reverse string method to the String prototype that returns a reversed version of the string', function() {
 		agregarStringInvertida();
@@ -39,11 +43,13 @@ describe('agregarStringInvertida(StringPrototype)', function(){
 	});
 });
 
+
 describe('crearInstanciaPersona()', function() {
 	it('should return a new instance of Persona', function() {
 		expect(crearInstanciaPersona("Juan", "Pérez", 22, "Saavedra 123")).toBeInstanceOf(Persona);
 	});
 });
+
 
 describe('agregarMetodo(Persona)', function() {
 	it('should add the method datos to the constructor', function() {
