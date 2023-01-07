@@ -1,0 +1,27 @@
+        /*Punto II.E Agregar un estilo para h1 (ej. color azul)*/
+        h1{   
+            color: blue;
+            text-decoration: underline;
+        }
+        /*Punto II.F Agregar un estilo para img (ej. Ancho de 400), este se aplicará a todas las imagenes de la página*/
+        img{
+            width: 400px;
+        }
+        #thirdDiv{
+            /*Punto II.G Para modificar el estilo de un div específico, usamos # y la id que le asignamos*/
+            width: 480px;
+            height: 440px;
+            /*Punto II.H En el mismo estilo cambiamos el color de fondo del div */
+            background-color: aquamarine;
+            /*Punto II. K volvemos al thirdDiv a realizar estos comandos */
+            padding: 50px;
+            /*Punto II. L Asignar borde al div */
+            border: solid;
+            border-color: blue;
+            border-width: 5px;
+        }
+        #spanId{
+            /*Punto II.I y J En spanId cambiamos el tamaño y el margen */
+            font-size: 18px;
+            margin: 50px;
+        }
