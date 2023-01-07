@@ -7,32 +7,54 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
 
 /* Arrancaremos este ejercicio por vos: */
 #ejercicioUno {
-
-}
+    display: block; /*Activar la opción de block nos va a permitir asignar alineación, margen, etc al span*/
+    text-align: center;
+} 
 
 
 /* Ejercicio 2: Posicionar el header */
 
 /* Acá va tu código */
-
+#ejercicioDos{
+    display: none;
+}
 
 
 /* Ejercicio 3: */
 
 /* Acá va tu código */
-
+#ejercicioTres{
+    /*Para poder ubicar la imagen donde deseemos debemos dar posicion relativa*/
+    position: relative;
+    top: 100px;
+    left: 200px;
+}
 
 
 /* Ejercicio 4: */
 
 /* Acá va tu código */
-
+#ejercicioCuatro{
+    /*Cambiamos la posición de la caja que contiene el encabezado*/
+    /*El ejercicio nos pide que quede fija arriba así se baje en la página*/
+    position: fixed;
+    /*Luego asignamos la ubicación con respecto a la página*/
+    top: 0px;
+    left: 0px;
+}
 
 
 /* Ejercicio 5: */
 
 /* Acá va tu código */
+#ejercicioCinco{
+    /*Para poder organizar los elementos dentro del contenedor div debemos colocarla como flexible*/
+    /*Lo que significa una flexbox*/
+    display: flex;
+    align-items: center; /*Alinear verticalmente los objetos dentro del contenedor div*/
+    justify-content: space-around; /*Separar igualmente*/
+    flex-direction: row-reverse; /*Cambiar la dirección de los elementos en el ordenador*/
+}
 
 
-
-/* Ejercicio 6. */
+/* Ejercicio 7. */
